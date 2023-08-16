@@ -1,5 +1,6 @@
 package com.atos.dsmovie.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -11,6 +12,7 @@ public class Score {
 	@EmbeddedId
 	private ScorePk id = new ScorePk();
 	
+	@Column(name ="value_v")
 	private Double value;
 	
 	public Score() {
