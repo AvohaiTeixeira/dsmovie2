@@ -3,6 +3,7 @@ package com.atos.dsmovie.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,7 @@ import com.atos.dsmovie.dto.MovieDto;
 import com.atos.dsmovie.services.MovieService;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping(value = "/movies")
 public class MovieController {
 	
