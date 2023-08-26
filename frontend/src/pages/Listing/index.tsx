@@ -42,7 +42,7 @@ function Listing() {
                             <MovieCard movie={movie} />
                         </div>
                         )
-                    )};
+                    )}
   
                 </div>
             </div>
