@@ -31,13 +31,19 @@ public class ScoreService {
 		//Busca o Usuário do banco
 		User user = userRepository.findByEmail(dto.getEmail());
 		
+		System.out.println("TESTE ATOS " + dto.getEmail().toString());
+		
 		//Se o Usuário não existir na base, cadastra como novo Usuário.
 		if (user == null) {
+			System.out.println("Criando Usuário com o e-mail " + dto.getEmail().toString());
 			user = new User();
 			user.setEmail(dto.getEmail());
 			
 			user = userRepository.saveAndFlush(user);
-		}
+		} 
+		
+		System.out.println(user.getEmail().toString());
+		System.out.println("TESTE");
 		
 		//Busca o filme
 		Movie movie = movieRepository.findById(dto.getMovieId()).get();
